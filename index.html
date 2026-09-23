@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore bench locations in the park and see which benches are available for adoption.">
+  <title>Park Bench Adoption Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Park Bench Adoption home">
+      <span class="brand-mark" aria-hidden="true">+</span>
+      <span><strong class="brand-name">Butt Seriously,</strong><br><em>Adopt One</em></span>
+    </a>
+    <p class="header-note">A living map of places to pause</p>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Explore the park</p>
+      <h1 id="page-title"><span class="headline-coral">Butt Seriously,</span><br><em>Adopt One</em></h1>
+      <p class="intro-copy">Take a walk, meet the locals, and adopt the one that steals your heart (and your seat) ;)</p>
+      <div class="map-stats" aria-label="Park map summary">
+          <div><strong>0</strong><span>perches plotted</span></div>
+          <div><strong>168</strong><span>in loving homes</span></div>
+          <div><strong>348</strong><span>looking for love</span></div>
+      </div>
+    </section>
+
+    <section class="map-section" aria-labelledby="map-heading">
+      <div class="map-heading-row">
+        <div>
+          <p class="eyebrow">The grounds</p>
+          <h2 id="map-heading">Pick Your Perch!</h2>
+        </div>
+        <div class="map-key" aria-label="Map legend">
+          <span><i class="key-dot available"></i>Available</span>
+          <span><i class="key-dot adopted"></i>Adopted</span>
+          <span><i class="key-path"></i>Walking path</span>
+        </div>
+      </div>
+
+      <div class="park-map" id="park-map" aria-label="Illustrated map of the park with bench locations">
+        <div class="park-title">Van Cortlandt Park</div>
+        <div class="map-toolbar" aria-label="Map scale information">
+          <span class="toolbar-live"><i></i>Live inventory</span>
+          <span>7 districts · 528 locations</span>
+        </div>
+        <div class="park-silhouette" aria-hidden="true"></div>
+        <div class="water-body water-north" aria-hidden="true"></div>
+        <div class="water-body water-north-east" aria-hidden="true"></div>
+        <div class="water-body water-west" aria-hidden="true"></div>
+        <div class="water-body water-south-west" aria-hidden="true"></div>
+        <div class="water-body water-east" aria-hidden="true"></div>
+        <div class="park-label park-north">Northwest forest</div>
+        <div class="park-label park-east">Northeast forest</div>
+        <div class="park-label park-central">Indian field</div>
+        <div class="park-label park-south">Parade ground</div>
+
+        <svg class="pathway" viewBox="0 0 600 1000" role="img" aria-label="A north to south map of Van Cortlandt Park with trails and a central waterway">
+          <path class="street-line" d="M28 80 H572 M28 918 H572 M28 80 V918 M572 80 V918" />
+          <path class="road-line" d="M70 150 C180 115 260 130 335 175 S485 230 535 170 M72 270 C185 235 230 270 305 315 S430 360 535 300 M62 500 C170 450 225 470 300 520 S450 585 548 520 M62 720 C170 670 220 700 290 750 S435 825 545 765" />
+          <path class="river-line" d="M270 95 C245 180 290 245 270 330 S245 475 275 560 S250 720 280 900" />
+          <path class="reference-route" d="M85 720 L72 700 L78 665 L108 655 L101 610 L88 535 L92 448 L112 420 L110 335 L130 285 L130 190 L145 125 L172 124 L188 113 L215 120 L230 110 L250 128 L245 160 L218 182 L208 225 L204 278 L188 330 L170 357 L178 392 L194 410 L204 452 L202 500 L215 540 L235 565 L250 550 L255 510 L245 475 L225 445 L218 410 L232 390 L255 405 L275 430 L292 468 L310 455 L316 410 L310 384 L325 373 L343 388 L333 414 L351 426 L344 505 L318 530 L315 600 L298 655 L285 705 L270 750 L260 800 L235 825 L200 842 L165 821 L132 808 L108 785 L75 782 L78 750 Z" />
+          <path class="reference-route" d="M316 385 L335 355 L365 360 L378 337 L405 315 L442 320 L465 336 L493 338 L520 355 L545 374 L523 390 L492 405 L465 420 L440 408 L415 392 L394 414 L420 435 L410 462 L382 450 L357 430" />
+          <path class="reference-route" d="M302 478 L330 505 L330 560 L315 608 L300 660" />
+          <path class="reference-route route-new" d="M245 205 L270 180 L305 176 L335 195 L355 225 L350 260 L330 285" />
+          <path class="reference-route route-new" d="M365 530 L395 548 L430 540 L460 558 L470 588 L450 615 L415 620 L385 600" />
+          <path class="reference-route route-new" d="M105 575 L135 600 L155 625 L165 665 L163 720 L170 780 L188 825 L220 845 L250 830 L268 795 L275 750" />
+          <path class="park-road" d="M300 80 V920" />
+        </svg>
+
+        <div class="tree tree-two" aria-hidden="true"></div>
+        <div class="tree tree-one" aria-hidden="true"></div>
+        <div class="tree tree-five" aria-hidden="true"></div>
+        <div class="tree tree-six" aria-hidden="true"></div>
+        <div class="tree tree-seven" aria-hidden="true"></div>
+        <div class="tree tree-eight" aria-hidden="true"></div>
+        <div class="tree tree-nine" aria-hidden="true"></div>
+        <div class="tree tree-ten" aria-hidden="true"></div>
+        <div class="tree tree-eleven" aria-hidden="true"></div>
+        <div class="tree tree-twelve" aria-hidden="true"></div>
+        <div class="tree tree-thirteen" aria-hidden="true"></div>
+        <div class="tree tree-fourteen" aria-hidden="true"></div>
+        <div class="tree tree-fifteen" aria-hidden="true"></div>
+        <div class="tree tree-sixteen" aria-hidden="true"></div>
+        <div class="tree tree-seventeen" aria-hidden="true"></div>
+        <div class="tree tree-eighteen" aria-hidden="true"></div>
+        <div class="map-legend" aria-label="Map legend"><strong>Map key</strong><span><i class="legend-tree"></i>Woodlands</span><span><i class="legend-trail"></i>Walking trails</span><span><i class="legend-water"></i>Waterways</span></div>
+
+        <div id="bench-markers" class="bench-markers"></div>
+        <div class="map-compass" aria-label="Map orientation">N<span>↑</span></div>
+      </div>
+
+      <aside class="bench-detail" id="bench-detail" tabindex="-1" aria-live="polite">
+        <div class="detail-placeholder">
+          <span class="detail-icon" aria-hidden="true">⌖</span>
+          <p>Select a bench on the map to see its story.</p>
+        </div>
+      </aside>
+
+      <dialog class="bench-dialog" id="bench-dialog" aria-labelledby="dialog-title">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Close bench details">×</button>
+        <p class="eyebrow">Bench details</p>
+        <h2 id="dialog-title">Your selected perch</h2>
+        <div class="dialog-status" id="dialog-status"></div>
+        <dl class="bench-facts" id="bench-facts"></dl>
+        <form class="adoption-form" id="adoption-form" hidden>
+          <label>Adopter name<input id="adopter-name" name="adopterName" required></label>
+          <label>Bench name<input id="bench-name" name="benchName" placeholder="Give this perch a name" required></label>
+          <label>Describe your bench<textarea id="adoption-description" name="description" rows="3" required></textarea></label>
+          <label>Adopting for<input id="dedication-recipient" name="recipient" placeholder="Someone you love" required></label>
+          <label>Adoption duration<select id="adoption-duration" name="duration" required><option value="">Choose a term</option><option>12 months</option><option>24 months</option><option>36 months</option><option>60 months</option></select></label>
+          <button class="adopt-button" type="submit">SAVE ADOPTION DETAILS</button>
+        </form>
+        <button class="adopt-button" id="adopt-button" type="button">ADOPT ME</button>
+      </dialog>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Made for the places that hold us</span>
+    <span class="footer-rule" aria-hidden="true"></span>
+    <span>Prototype map · 2026</span>
+  </footer>
+</body>
+</html>
