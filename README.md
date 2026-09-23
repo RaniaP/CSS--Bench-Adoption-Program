@@ -1,71 +1,54 @@
-# Project Name
+# Butt Seriously, Adopt One — Park Bench Adoption Map
 
-A short description of what this project does and why it exists (1–2 sentences).
+An interactive map of Van Cortlandt Park where visitors can explore bench locations, see which benches are available or already adopted, and fill out an adoption form to name and dedicate a bench to someone they love.
+
+**Live site:** https://raniap.github.io/CSS--Bench-Adoption-Program/
 
 ## Features
 
-- Feature one
-- Feature two
-- Feature three
+- Illustrated park map with woodlands, walking trails, and waterways
+- Bench markers color-coded as **Available** or **Adopted**
+- Click a bench to see its details
+- Adoption form: adopter name, bench name, description, dedication, and adoption term (12–60 months)
+- Responsive layout for desktop and mobile
 
-## Requirements
+## Built With
 
-- [Language + version, e.g. Python 3.11 or Node.js 20]
-- Git
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-   ```
-2. Move into the project folder:
-   ```bash
-   cd YOUR-REPO
-   ```
-3. Install dependencies:
-   ```bash
-   # Python
-   pip install -r requirements.txt
-
-   # or JavaScript / Node
-   npm install
-   ```
-4. (If needed) Set up environment variables:
-   ```bash
-   cp .env.example .env
-   ```
-   Then open `.env` and fill in your own values.
+- HTML
+- CSS
+- JavaScript (no frameworks, no installation needed)
 
 ## How to Run
 
-```bash
-# Python
-python main.py
+**Option 1: View it online**
 
-# or JavaScript / Node
-npm start
-```
+Open the live site: https://raniap.github.io/CSS--Bench-Adoption-Program/
 
-## Example Output / Usage
+**Option 2: Run it locally**
 
-Describe what the user should see when the program runs successfully, or include a sample input and output.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/RaniaP/CSS--Bench-Adoption-Program.git
+   ```
+2. Open the project folder:
+   ```bash
+   cd CSS--Bench-Adoption-Program
+   ```
+3. Open `index.html` in any web browser (double-click it, or drag it into a browser window).
+
+No installs, packages, or build steps are required.
 
 ## Project Structure
 
 ```
-YOUR-REPO/
-├── README.md
-├── requirements.txt   (or package.json)
-├── main.py            (or your entry file)
-└── ...
+CSS--Bench-Adoption-Program/
+├── index.html              # Page structure and content
+├── styles.css              # Map, layout, and visual styling
+├── script.js               # Bench markers, details panel, and adoption form
+├── bench-adoption-prd.md   # Product requirements document
+└── README.md
 ```
 
 ## Author
 
-Your Name — [GitHub profile](https://github.com/YOUR-USERNAME)
-# CSS--Bench-Adoption-Program
-# CSS--Bench-Adoption-Program
-# CSS--Bench-Adoption-Program
-# CSS--Bench-Adoption-Program
-# CSS--Bench-Adoption-Program
+Rania Paredes — [GitHub](https://github.com/RaniaP)
